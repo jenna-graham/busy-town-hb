@@ -4,13 +4,10 @@ import VehicleList from './VehicleList';
 import TrafficLight from './TrafficLight';
 
 function App() {
-  const [lightColor, setLightColor] = useState('red');
-  // track the following state with a few useState hooks:
   // lightColor should be a string that starts out as 'red'
+  const [lightColor, setLightColor] = useState('red');
   const [lizardSize, setLizardSize] = useState(10);
-  // lizardSize should be a number that starts out as 10
   const [alienSize, setAlienSize] = useState(10);
-  // alienSize should be a number that starts out as 10
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
   // function handleRedLightClick() {
   //   <style> {`
@@ -22,7 +19,7 @@ function App() {
       <div className="fight">
         <div className="monster">
           {/* the width of the alien should be ten times whatever the alien size is in state */}
-          <img src="alien.png" style={{ width: `${alienSize}px` }}/>
+          <img src="alien.png" style={{ width: `${alienSize * 10 }px` }}/>
           <div className='buttons'>
             {/* when you click this button, the alien's size in state should go up by one */}
             <button onClick={() => setAlienSize(alienSize + 1)}>Oh no! The alien is gobblin up all the electricity!</button>
@@ -32,7 +29,7 @@ function App() {
         </div>
         <div className="monster">
           {/* the width of the lizard should be ten times whatever the alien size is in state */}
-          <img src="lizard.png" style={{ width: `${lizardSize}px` }} />
+          <img src="lizard.png" style={{ width: `${lizardSize * 10 }px` }} />
           <div className="buttons">
             {/* when you click this button, the lizard's size in state should go up by one */}
             <button onClick={() => setLizardSize(lizardSize + 1)}>Yegads! The lizard is ramping up to its final form!</button>
