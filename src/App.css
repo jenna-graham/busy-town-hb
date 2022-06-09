@@ -72,8 +72,11 @@ body {
   align-items: center;
 }
 
-.traffic {
-  background-color: rgba(100, 170, 51, .7) 
+.vehicle {
+  background-color: rgba(100, 170, 51, .7);
+  display: flex; 
+  padding: 10px;
+  
 
 }
 
